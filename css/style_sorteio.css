@@ -1,0 +1,1228 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b232b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+}
+
+@media (min-width: 800px) {
+    .logo1 {
+        width: 100px !important;
+        height: 50px !important;
+    
+    }
+    .container {
+        width: 600px !important;
+        background-color: #212b36;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 5%;
+    
+        border-radius: 20px;
+       
+    }
+    .top-bar {
+        position: fixed;
+        
+        width: 100%; /* Garante que o cabeçalho ocupe toda a largura, mas limitado a 95% */
+        max-width: 100%; /* Define a largura máxima do top-bar */
+        margin-bottom: -10%;
+       
+    }
+    
+
+    .logo {
+        width: 10%;
+        
+        margin-left: 29%;
+        margin-top: 0%;
+        border-radius: 5px;
+        
+    }
+    
+    .menu-toggle {
+        display: block; /* Mostra o ícone do menu em telas menores */
+        margin-right: 29%;
+    }
+
+    #mobile-menu {
+        display: block; /* Mostra o menu móvel em telas menores */
+    }
+
+    .hidden {
+        display: none; /* Oculta o menu na tela grande */
+    }
+
+    #banner1 {
+        width: 90% !important;
+       
+        margin: 0 auto; /* Centraliza o elemento horizontalmente */
+        display: block; /* Garante que o elemento seja tratado como um bloco */
+    }
+
+    #bannersorteio{
+        width: 80% !important;
+       
+        margin: 0 auto; /* Centraliza o elemento horizontalmente */
+        display: block; /* Garante que o elemento seja tratado como um bloco */
+        margin-bottom: 15px;
+    
+    }
+
+    .modal {
+    
+        margin-top: 0%;
+    }
+
+    
+    .modal-premiados {
+       
+        margin-top: -3%;
+    
+    }
+
+    .comprar-modal {
+ 
+        margin-top: -5%;
+        height: 110%;
+    }
+
+    .comprar-warning i {
+        margin-right: 10px; /* Espaço entre o ícone e o texto */
+    
+        margin-top: 0px;
+        
+        
+    }
+    .warning2222 {
+        text-align: center;
+    }
+    .comprar-modal-content {
+        background-color: #212b36;
+        margin: 15% auto;
+        padding: 10px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+        font-size: 20px;
+       
+    }
+
+   
+
+   
+    
+    
+}
+
+
+        .quantidade-control {
+            display: flex;
+            align-items: center;
+            height: 5.5vh;
+            justify-content: space-between;
+            width: 200px; /* Ajuste conforme necessário */
+            margin: 0 auto; /* Centraliza o .quantidade-control */
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+            border-radius: 50px;
+            padding: 4px ;
+        
+        }
+
+        .quantidade-control input {
+            width: 90px; /* Ajuste conforme necessário */
+            text-align: center;
+            font-size: 16px;
+            padding: 5px;
+            background-color: #212b36;
+            color: #fff;
+            outline: none; /* Remove a borda ao clicar */
+            border: none;
+        }
+
+        .quantidade-control #decrement {
+            margin-right: 45px; /* Margem à direita para separar do input */
+        }
+        #decrement {
+            margin-left: 18px;
+
+        }
+
+        .quantidade-control #increment {
+            margin-left: 45px; /* Margem à esquerda para separar do input */
+        }
+        
+        /* Remover setinhas de incremento/decremento do input number */
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+
+
+        /* Estilos para o menu móvel */
+        #mobile-menu {
+            display: none;
+            position: fixed; /* Fixar o menu para acompanhar a rolagem */
+            top: 76px; /* Espaço para o menu móvel abaixo do top-bar */
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            z-index: 999; /* Garante que o menu móvel esteja acima do top-bar */
+        }
+        
+        /* Estilos para o top-bar */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo do cabeçalho com transparência */
+            z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+            width: 95%; /* Garante que o cabeçalho ocupe toda a largura, mas limitado a 95% */
+            max-width: 1200px; /* Define a largura máxima do top-bar */
+            transition: background-color 0.3s ease; /* Transição suave para a mudança de cor de fundo */
+        }
+        
+    
+
+       
+
+        .menu-toggle {
+            font-size: 25px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto em telas maiores */
+        }
+
+   
+
+        #mobile-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #mobile-menu ul li {
+            margin-bottom: 10px;
+        }
+
+        #mobile-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block; /* Mostra o ícone do menu em telas menores */
+            }
+
+            #mobile-menu {
+                display: block; /* Mostra o menu móvel em telas menores */
+            }
+
+            .hidden {
+                display: none; /* Oculta o menu na tela grande */
+            }
+            .logo1 {
+                width: 100px !important;
+                height: 50px !important;
+            
+            }
+        
+        }
+
+
+        #banner1 {
+            border: 1px solid #474545;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+      
+
+        .valor-cota {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #btnTotalValue12 {
+            font-size: 20px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            padding: 6px 12px;
+            background-color: #1b1b1b;
+        }
+        #pap {
+            font-size: 18px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        .botoes-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px; /* Ajuste conforme necessário */
+        }
+
+        .custom-button {
+            width: 90%;
+            height: 7vh;
+            margin-bottom: 10px; /* Espaço de 10px entre os botões */
+            padding: 6px 12px;
+            font-size: 16px;
+            background-color: #474545;/* Cor de fundo do botão */
+            color: #fff; /* Cor do texto do botão */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .custom-button i {
+            margin-right: 10px; /* Margem entre o ícone e o texto */
+        }
+
+        .custom-button:hover {
+            background-color: #0d4810; /* Cor de fundo do botão ao passar o mouse */
+        }
+        .modal {
+            display: none; /* Ocultar por padrão */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5); /* Cor de fundo semi-transparente */
+            color:white;
+            margin-top: 25%;
+        }
+        .modal-content {
+        background-color: #212b36;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+        }
+        .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+        .login-popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+            font-size: 20px;
+        }
+
+        .popup-content {
+            background-color: #212b36;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            
+        }
+
+        .close1 {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close1:hover,
+        .close1:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .login-box {
+            text-align: center;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+        }
+
+        .textbox {
+            position: relative;
+        }
+
+        .textbox input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size:18px;
+        }
+
+        .warning {
+            color: #d9534f;
+            display: none;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+      
+
+        .modal-premiados {
+            display: none; /* Ocultar por padrão */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5); /* Cor de fundo semi-transparente */
+            color: white;
+            margin-top: 10%;
+        }
+        .modal-content-premiados {
+            background-color: #212b36;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .close-premiados {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-premiados:hover,
+        .close-premiados:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center; /* Centraliza os elementos dentro do footer */
+            white-space: nowrap;
+        }
+        
+        .social {
+            margin-top: 10px; /* Espaçamento superior entre o texto de direitos autorais e os ícones */
+            white-space: nowrap;
+        }
+        
+        .social .share-title {
+            font-family: 'Arial', sans-serif; /* Escolha uma fonte bonita ou personalizada */
+            font-size: 1.4em; /* Tamanho da fonte */
+            margin-bottom: 10px; /* Espaçamento abaixo do título */
+            color: #968585; /* Cor do título */
+        }
+        
+        .social a {
+            display: inline-block;
+            margin: 0 20px; /* Aumenta o espaço entre os ícones */
+        }
+        
+        .social a i {
+            font-size: 1.2em; /* Tamanho do ícone */
+            color: white; /* Cor do ícone */
+            width: 1.4em; /* Largura do ícone */
+            height: 1.4em; /* Altura do ícone */
+            display: flex; /* Utiliza flexbox para centralizar ícone */
+            align-items: center; /* Alinha verticalmente no centro */
+            justify-content: center; /* Alinha horizontalmente no centro */
+            border-radius: 7px; /* Torna o fundo arredondado */
+            padding: 1px;; /* Espaçamento interno para o ícone */
+            margin: 0 12px; /* Aumenta o espaço entre os ícones */
+        }
+        
+        .social a.facebook i {
+            background-color: #3b5998; /* Cor de fundo do Facebook */
+        }
+        
+        .social a.twitter i {
+            background-color: #1da1f2; /* Cor de fundo do Twitter */
+        }
+        
+        .social a.instagram i {
+            background-color: #e1306c; /* Cor de fundo do Instagram */
+        }
+        
+        .social a.telegram i {
+            background-color: #0088cc; /* Cor de fundo do Telegram */
+        }
+        
+        .comprar-btn {
+            padding: 10px 20px;
+            background-color: #198754;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .comprar-btn:hover {
+            background-color: #45a049;
+        }
+
+        .comprar-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            font-size: 20px;
+            margin-top: 10%;
+        }
+
+        .comprar-modal-content {
+            background-color: #212b36;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .comprar-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .comprar-close:hover,
+        .comprar-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .comprar-input {
+            width: 90%;
+            height: 7vh;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            font-size: 18px;
+            background-color:transparent;
+            border-radius: 10px;
+            border: 1px solid gray;
+        }
+        .comprar-warning {
+            color: #d4ba77;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex; /* Utiliza flexbox para alinhar ícone e texto */
+            align-items: center; /* Alinha verticalmente o ícone e o texto */
+        }
+        
+        .comprar-warning i {
+            margin-right: -20px; /* Espaço entre o ícone e o texto */
+            color: #ffcc00; /* Cor amarela do ícone */
+            font-size: 1.2em; /* Tamanho do ícone */
+            margin-top: -20px;
+            
+        }
+        
+        .warning2222 {
+            background-color: #7a4f01;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            width: 80%;
+            font-weight: bold;
+            padding: 12px 16px;
+            margin: 0 auto 5px; /* Centraliza o elemento horizontalmente e adiciona margem inferior */
+            text-align: center; /* Centraliza o texto dentro do elemento, se necessário */
+        }
+
+        .warning222 {
+            background-color: #7a4f01;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            width: 80%;
+            font-weight: bold;
+            padding: 12px 16px;
+            margin: 0 auto 5px; /* Centraliza o elemento horizontalmente e adiciona margem inferior */
+           
+           
+        }
+        
+        .warning22 {
+          
+            color: #d4ba77;
+            font-weight: bold;
+            font-size: 16px;
+        
+        }
+        .warning22 i {
+            margin-right: 8px; /* Espaço entre o ícone e o texto */
+            color: #ffcc00; /* Cor amarela do ícone */
+            font-size: 1.2em; /* Tamanho do ícone */
+        }
+
+        .comprar-btn-finalizar {
+            padding: 10px 20px;
+            background-color: #198754;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 15px;
+            border-radius: 7px;
+            width: 90%;
+            margin-bottom: 10px;
+            
+
+        }
+        #nomeCompleto {
+            margin-top: -3%;
+        }
+
+        .comprar-info {
+            font-size: 14px;
+            color: grey;
+            margin-top: 10px;
+        }
+
+        .comprar-info a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .comprar-info a:hover {
+            text-decoration: underline;
+        }
+
+        #additionalFields {
+            margin-top: 5%;
+            background-color: #212b36;
+        }
+        #jesus input {
+            background-color: #212b36;
+            border:1px solid gray;
+            border-radius: 10px;
+            color: white;
+        }
+        #dataNascimento {
+            color: #CCCCCC; 
+            background-color: white;
+        }
+
+        #btt2 {
+            border-radius: 5px;
+            width: 85%;
+            font-size: 20px;
+            padding: 12px 24px;
+            background-color: #198754;
+            
+        }
+        #telefone {
+            border-radius: 10px;
+            width: 80%;
+            margin-top: 13px;
+            margin-bottom: 5%;
+            background-color: transparent;
+            color: white;
+            height: 4vh;
+        }
+
+
+#info-message {
+    display: flex;
+    background-color: #116fc6;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 80%;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0 auto 5px; /* Centraliza o elemento horizontalmente e adiciona margem inferior */
+    display: none; /* Inicialmente oculto */
+    font-size: 14px;
+   
+
+}
+#info-message i {
+    color: #6faef1; /* Cor azul para o ícone de informação */
+    font-size: 1.4em; /* Tamanho do ícone */
+    margin-right: 1%;
+    margin-left: -10px;
+    
+}
+
+#product-info {
+    color:  #d4ba77;
+
+}
+
+.descricao {
+    font-family: 'Arial', sans-serif; /* Fonte bonita */
+    font-size: 14px;
+    line-height: 1.6; /* Espaçamento entre linhas para melhorar a legibilidade */
+    color: #c7c2c2; /* Cor do texto */
+    text-align: left; /* Alinhar à esquerda */
+    margin: 5px; /* Espaçamento ao redor do bloco de texto */
+    
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border: 1px solid gray;
+}
+.descricao h6 {
+    font-size: 16px; /* Tamanho da fonte do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    color: #bcccde; /* Cor do título */
+    margin-top: -1%;
+}
+.descricao p {
+    margin: 0; /* Remover margens do parágrafo */
+}
+.descricao a {
+    color: #007bff; /* Cor dos links */
+    text-decoration: none; /* Remover sublinhado */
+}
+.descricao a:hover {
+    text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
+}
+
+
+
+hr {
+    margin: 5px 0 0 0; /* Ajuste a margem superior conforme necessário */
+    border: none;
+    border-top: 1px solid #ccc; /* Define a linha horizontal */
+}
+.header-container11 {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens para que fiquem nos extremos */
+    align-items: center; /* Alinha verticalmente ao centro */
+    position: relative; /* Necessário para o alinhamento dos elementos */
+}
+
+.close1 {
+    cursor: pointer; /* Estiliza o cursor para indicar que é clicável */
+    font-size: 24px; /* Tamanho do ícone */
+    color: rgb(255, 255, 255); /* Cor do ícone */
+    margin: 0; /* Remove margens adicionais */
+    margin-right: 10px;
+}
+
+
+
+.premio-container1 {
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.premio-numero {
+    font-size: 26px;
+    color: green;
+    margin-right: 20px; /* Reduzi o espaço entre o número e o texto */
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
+.premio-valor {
+    flex-grow: 1; /* Ocupa todo o espaço disponível */
+    font-size: 14px; /* Reduzi o tamanho da fonte */
+    color: green;
+    overflow: hidden; /* Evita que o texto ultrapasse o contêiner */
+    text-overflow: ellipsis; /* Adiciona reticências caso o texto seja muito longo */
+    text-align: left;
+    word-wrap: break-word; /* Permite a quebra de palavras */
+    
+    
+}
+        
+
+.premios-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    height: 100%; /* Ajuste conforme necessário */
+    margin-bottom: -15px;
+    margin-top: 15px;
+}
+
+.premios-container i {
+    margin-right: 20px; /* Espaço entre o ícone e o texto */
+    
+}
+
+#prepre {
+    font-size: 14px;
+    color:rgb(154, 154, 154);
+}   
+#spanpremio {
+    font-size: 12px;
+    color:rgb(154, 147, 147);
+}
+
+#titu {
+    font-size: 18px;
+}
+
+.logo {
+    width: 30%;
+    height: 7vh;
+    margin-left: 3%;
+    margin-top: 1%;
+    border-radius: 5px;
+    
+}
+
+.menu-toggle {
+    font-size: 29px;
+    cursor: pointer;
+}
+
+#mobile-menu.hidden {
+    display: none;
+}
+
+#mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #212b36;
+}
+
+#mobile-menu ul li {
+    border-bottom: 1px solid #555;
+}
+
+#mobile-menu ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#mobile-menu ul li a:hover {
+    background-color: #555;
+}
+
+.container {
+    width: 100%;
+    background-color: #212b36;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-top: 20%;
+}
+
+.container img {
+    width: 100%;
+}
+
+.sorteio, .detalhes, footer {
+    padding: 16px;
+    text-align: center;
+}
+
+.info {
+    text-align: left;
+    padding: 16px;
+} 
+.info h3 {
+    font-size: 24px;
+    margin-top: -2%;
+    margin-bottom: 5px;
+}
+.info p {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.info span {
+    font-weight: bold;
+}
+
+.sorteio h2 {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.numeros {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.numeros .col-12 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numeros button {
+    flex: 0 0 48%;
+    padding: 25px;
+    font-size: 16px;
+    background-color: #005454;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+#maispopular {
+    margin-top: 0px;
+    white-space: nowrap;
+}
+
+.numeros button .label {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.numeros button.popular .label {
+    background-color: #ff9800;
+}
+
+.numeros button.grupo .label {
+    background-color: #00bcd4;
+}
+
+.numeros button:hover {
+    background-color: #4caf50;
+}
+
+.numeros p {
+    margin: 0;
+    font-size: 16px;
+}
+.numeros strong {
+    font-size: 26px;
+}
+
+.detalhes p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.detalhes a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.detalhes a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #212b36;
+    padding: 16px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social a {
+    margin: 0 8px;
+    color: #4caf50;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    text-decoration: underline;
+}
+
+#bannersorteio {
+    margin-top: 2%;
+    border-radius: 20px;
+    max-width: 95%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.selecionado {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+   
+}
+
+.selecionado p {
+    margin-bottom: 5px;
+}
+
+#quantidadeSelecionada {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50;
+    text-align-last: center;
+    width: 160px;
+    height: 3vh;
+    padding: 3px 6px;
+}
+
+.quantidade-control {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.quantidade-control button {
+    background-color: transparent;
+    border-radius: 500px;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    font-size: 24px;
+    cursor: pointer;
+   
+    margin: 0 10px;
+    
+    border: 1px solid gray;
+}
+
+.quantidade-control button:hover {
+    background-color: #45a049;
+}
+
+#valorTotal {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.valor-total {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#btnTotal {
+    background-color: #198754;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 90%;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+#btnTotal:hover {
+    background-color: #45a049;
+}
+
+#btnTotal:focus {
+    outline: none;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.whatsapp-button1 {
+    position: fixed; /* Fixa o botão na posição especificada */
+    bottom: 81px;    /* Distância da borda inferior da janela */
+    right: 10px;     /* Distância da borda direita da janela */
+    font-size: 12px;
+    z-index: 1000;   /* Garante que o botão fique acima de outros elementos */
+    animation: pulsate 2s infinite; /* Adiciona a animação de pulso (2 segundos) */
+}
+
+.whatsapp-button1 a {
+    display: inline-block;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.whatsapp-button1 a img {
+    vertical-align: middle;
+    margin-right: 10px;
+    
+}
+
+.whatsapp-button {
+    position: fixed; /* Fixa o botão na posição especificada */
+    bottom: 49px;    /* Distância da borda inferior da janela */
+    right: 10px;     /* Distância da borda direita da janela */
+    font-size: 12px;
+    z-index: 1000;   /* Garante que o botão fique acima de outros elementos */
+    animation: pulsate 2s infinite; /* Adiciona a animação de pulso (2 segundos) */
+}
+
+.whatsapp-button a {
+    display: inline-block;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.whatsapp-button a img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+.instagram-button {
+    position: fixed; /* Fixa o botão na posição especificada */
+    bottom: 15px;    /* Distância da borda inferior da janela */
+    right: 10px;     /* Distância da borda direita da janela */
+    font-size: 12px;
+    z-index: 1000;   /* Garante que o botão fique acima de outros elementos */
+    animation: pulsate 2s infinite; /* Adiciona a animação de pulso (2 segundos) */
+}
+
+.instagram-button a {
+    display: inline-block;
+    background-color: #ed5c5f; /* Cor do WhatsApp */
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.instagram-button a img {
+    vertical-align: middle;
+    margin-right: 10px;
+    
+}
+.custom-button1 {
+    width: 90%;
+    height: 7vh;
+    margin-bottom: 10px; /* Espaço de 10px entre os botões */
+    padding: 6px 12px;
+    font-size: 16px;
+    background-color: #198754;
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.custom-button1 i {
+    margin-right: 10px; /* Margem entre o ícone e o texto */
+}
+
+#w2 {
+    margin-top: 10px;
+}
+
+.custom-button1:hover {
+    background-color: #0d4810; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+
+
